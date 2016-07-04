@@ -1,7 +1,9 @@
 import matplotlib
-from .view import MatplotView
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 import numpy as np
+from sompy.visualization.view import MatplotView
+
+
 
 
 class DotMapView(MatplotView):

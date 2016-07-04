@@ -1,10 +1,10 @@
 import matplotlib
-from .view import MatplotView
 import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import numpy as np
 import pandas as pd
 
+from sompy.visualization.view import MatplotView
 
 class MapView(MatplotView):
 

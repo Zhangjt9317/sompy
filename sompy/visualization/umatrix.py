@@ -1,11 +1,11 @@
-import matplotlib
-from .view import MatplotView
-from matplotlib import pyplot as plt
-from pylab import meshgrid, cm, imshow, contour, clabel, colorbar, axis, title, show
 from math import sqrt
+import matplotlib
+import matplotlib.pyplot as plt
+from pylab import meshgrid, cm, imshow, contour, clabel, colorbar, axis, title, show
 import numpy as np
 import scipy
 
+from sompy.visualization.view import MatplotView
 
 class UMatrixView(MatplotView):
 

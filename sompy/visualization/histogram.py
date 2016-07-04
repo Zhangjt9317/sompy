@@ -1,9 +1,9 @@
-from .view import MatplotView
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 from matplotlib import cm
 from matplotlib.colors import LogNorm
 import numpy as np
 
+from sompy.visualization.view import MatplotView
 
 class Hist2d(MatplotView):
 

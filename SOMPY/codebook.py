@@ -86,7 +86,7 @@ class Codebook(object):
         coord = (coord - mn)/(mx-mn)
         coord = (coord - .5)*2
         me = np.mean(data, 0)
-        data = (data - me)
+        data = data - me
         tmp_matrix = np.tile(me, (self.nnodes, 1))
 
         pca = RandomizedPCA(n_components=pca_components)  # Randomized PCA is scalable
@@ -116,7 +116,8 @@ class Codebook(object):
         elif self.lattice == 'hexa':
             return self._hexa_dist(node_ind)
 
-    def _hexa_dist(self, node_ind):
+    @staticmethod
+    def _hexa_dist(node_ind):
         raise NotImplementedError()
 
     def _rect_dist(self, node_ind):

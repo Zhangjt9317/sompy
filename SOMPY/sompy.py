@@ -323,7 +323,7 @@ class SOM(object):
         row_chunk = lambda part: part * dlen // njb
         col_chunk = lambda part: min((part+1)*dlen // njb, dlen)
 
-        b = parallelizer(chunk_bmu_finder(input_matrix[row_chunk(i):col_chunk(i)], self.codebook.matrix, y2) for i in xrange(njb))
+        b = parallelizer(chunk_bmu_finder(input_matrix[row_chunk(i):col_chunk(i)], self.codebook.matrix, y2) for i in range(njb))
         bmu = np.asarray(list(itertools.chain(*b))).T
 
         del b
